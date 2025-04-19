@@ -1,20 +1,19 @@
-﻿// Participantes: João Silva, Maria Souza
-// Avaliação 02 - POO - Sistema de Revenda Automotiva
+﻿// Participantes: Gabriel Coelho Severino, Leandro Jader Ramos Nunes, André Nicolas Granemann Coelho
 
 using System;
 using System.Collections.Generic;
-
-// Pilar: Abstração
 
 public class Program
 {
     static void Main()
     {
+        // Pilar: Encapsulamento (dados da revenda sendo inseridos de forma controlada)
         Console.Write("Informe o nome da revenda: ");
         string nomeRevenda = Console.ReadLine();
         Console.Write("Informe o endereço da revenda: ");
         string enderecoRevenda = Console.ReadLine();
 
+        // Pilar: Abstração (a classe Revenda abstrai o conceito de uma revenda de veículos)
         Revenda revenda = new Revenda(nomeRevenda, enderecoRevenda);
 
         bool executando = true;
@@ -55,18 +54,24 @@ public class Program
                     {
                         Console.Write("Número de portas: ");
                         int portas = int.Parse(Console.ReadLine());
+
+                        // Pilar: Polimorfismo (instância de Carro sendo tratada como Veiculo)
                         revenda.AdicionarVeiculo(new Carro(modelo, marca, cor, ano, portas));
                     }
                     else if (tipo == "2")
                     {
                         Console.Write("Cilindradas: ");
                         int cilindradas = int.Parse(Console.ReadLine());
+
+                        // Pilar: Polimorfismo
                         revenda.AdicionarVeiculo(new Moto(modelo, marca, cor, ano, cilindradas));
                     }
                     else if (tipo == "3")
                     {
                         Console.Write("Número de eixos: ");
                         int eixos = int.Parse(Console.ReadLine());
+
+                        // Pilar: Polimorfismo
                         revenda.AdicionarVeiculo(new Caminhao(modelo, marca, cor, ano, eixos));
                     }
                     else
@@ -76,19 +81,19 @@ public class Program
                     break;
 
                 case "2":
-                    revenda.ListarTodos();
+                    revenda.ListarTodos(); // Polimorfismo em ação na exibição (ToString override)
                     break;
 
                 case "3":
-                    revenda.ListarPorTipo<Carro>();
+                    revenda.ListarPorTipo<Carro>(); // Polimorfismo com uso de generics e tipo base
                     break;
 
                 case "4":
-                    revenda.ListarPorTipo<Moto>();
+                    revenda.ListarPorTipo<Moto>(); // Polimorfismo
                     break;
 
                 case "5":
-                    revenda.ListarPorTipo<Caminhao>();
+                    revenda.ListarPorTipo<Caminhao>(); // Polimorfismo
                     break;
 
                 case "0":
@@ -104,4 +109,3 @@ public class Program
         Console.WriteLine("Programa encerrado.");
     }
 }
-  
