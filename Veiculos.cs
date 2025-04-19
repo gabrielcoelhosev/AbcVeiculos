@@ -1,16 +1,25 @@
+public abstract class Veiculo
+{
+    private static int _ultimoId = 0;
 
-public class Veiculos {
-
-    public int VeiculoId { get; set; }
-    public string Modelo { get; set;}
-    public string Cor { get; set; } 
-    public string Marca { get; set;}
+    public int Id { get; private set; }
+    public string Modelo { get; set; }
+    public string Marca { get; set; }
+    public string Cor { get; set; }
     public int Ano { get; set; }
 
-    public Veiculos(string modelo, string cor, string marca, int ano) {
+    public Veiculo(string modelo, string marca, string cor, int ano)
+    {
+        Id = ++_ultimoId;
         Modelo = modelo;
-        Cor = cor;
         Marca = marca;
+        Cor = cor;
         Ano = ano;
+    }
+
+    // Pilar: Polimorfismo
+    public override string ToString()
+    {
+        return $"ID: {Id} | Tipo: {GetType().Name} | Modelo: {Modelo}, Marca: {Marca}, Cor: {Cor}, Ano: {Ano}";
     }
 }
