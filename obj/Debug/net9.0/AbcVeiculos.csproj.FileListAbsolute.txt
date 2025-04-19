@@ -1,0 +1,15 @@
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\bin\Debug\net9.0\AbcVeiculos.exe
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\bin\Debug\net9.0\AbcVeiculos.deps.json
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\bin\Debug\net9.0\AbcVeiculos.runtimeconfig.json
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\bin\Debug\net9.0\AbcVeiculos.dll
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\bin\Debug\net9.0\AbcVeiculos.pdb
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.GeneratedMSBuildEditorConfig.editorconfig
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.AssemblyInfoInputs.cache
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.AssemblyInfo.cs
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.csproj.CoreCompileInputs.cache
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.sourcelink.json
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.dll
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\refint\AbcVeiculos.dll
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.pdb
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\AbcVeiculos.genruntimeconfig.cache
+C:\www\tioLu33\AbcVeiculos\AbcVeiculos\obj\Debug\net9.0\ref\AbcVeiculos.dll
