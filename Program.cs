@@ -7,14 +7,8 @@ public class Program
 {
     static void Main()
     {
-        // Pilar: Encapsulamento (dados da revenda sendo inseridos de forma controlada)
-        Console.Write("Informe o nome da revenda: ");
-        string nomeRevenda = Console.ReadLine();
-        Console.Write("Informe o endereço da revenda: ");
-        string enderecoRevenda = Console.ReadLine();
-
-        // Pilar: Abstração (a classe Revenda abstrai o conceito de uma revenda de veículos)
-        Revenda revenda = new Revenda(nomeRevenda, enderecoRevenda);
+        // Pilar: Abstração (a revendedora é criada automaticamente, ocultando os detalhes da inicialização)
+        Revenda revenda = new Revenda("ABC Bolinhas", "Endereço padrão");
 
         bool executando = true;
 
@@ -35,8 +29,8 @@ public class Program
             {
                 case "1":
                     Console.WriteLine("\nTipos de veículos:");
-                    Console.WriteLine("1 - Carro");
-                    Console.WriteLine("2 - Moto");
+                    Console.WriteLine("1 - Automóvel");
+                    Console.WriteLine("2 - Motocicleta");
                     Console.WriteLine("3 - Caminhão");
                     Console.Write("Escolha o tipo: ");
                     string tipo = Console.ReadLine();
@@ -54,23 +48,20 @@ public class Program
                     {
                         Console.Write("Número de portas: ");
                         int portas = int.Parse(Console.ReadLine());
-
-                        // Pilar: Polimorfismo (instância de Carro sendo tratada como Veiculo)
-                        revenda.AdicionarVeiculo(new Carro(modelo, marca, cor, ano, portas));
+                        // Pilar: Polimorfismo (instância Automovel tratada como Veiculo)
+                        revenda.AdicionarVeiculo(new Automovel(modelo, marca, cor, ano, portas));
                     }
                     else if (tipo == "2")
                     {
                         Console.Write("Cilindradas: ");
                         int cilindradas = int.Parse(Console.ReadLine());
-
                         // Pilar: Polimorfismo
-                        revenda.AdicionarVeiculo(new Moto(modelo, marca, cor, ano, cilindradas));
+                        revenda.AdicionarVeiculo(new Motocicleta(modelo, marca, cor, ano, cilindradas));
                     }
                     else if (tipo == "3")
                     {
                         Console.Write("Número de eixos: ");
                         int eixos = int.Parse(Console.ReadLine());
-
                         // Pilar: Polimorfismo
                         revenda.AdicionarVeiculo(new Caminhao(modelo, marca, cor, ano, eixos));
                     }
@@ -81,25 +72,20 @@ public class Program
                     break;
 
                 case "2":
-                    revenda.ListarTodos(); // Polimorfismo em ação na exibição (ToString override)
+                    revenda.ListarTodos();
                     break;
-
                 case "3":
-                    revenda.ListarPorTipo<Carro>(); // Polimorfismo com uso de generics e tipo base
+                    revenda.ListarPorTipo<Automovel>();
                     break;
-
                 case "4":
-                    revenda.ListarPorTipo<Moto>(); // Polimorfismo
+                    revenda.ListarPorTipo<Motocicleta>();
                     break;
-
                 case "5":
-                    revenda.ListarPorTipo<Caminhao>(); // Polimorfismo
+                    revenda.ListarPorTipo<Caminhao>();
                     break;
-
                 case "0":
                     executando = false;
                     break;
-
                 default:
                     Console.WriteLine("Opção inválida!");
                     break;
